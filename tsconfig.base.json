@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@make-app/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@make-app/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@make-app/core-data": ["libs/core-data/src/index.ts"],
+      "@make-app/core-state": ["libs/core-state/src/index.ts"],
+      "@make-app/environment": ["libs/environment/src/index.ts"],
+      "@make-app/material": ["libs/material/src/index.ts"],
+      "@make-app/ui-library": ["libs/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
