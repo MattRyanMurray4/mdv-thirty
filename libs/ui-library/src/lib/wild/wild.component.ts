@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'make-app-wild',
   templateUrl: './wild.component.html',
-  styleUrls: ['./wild.component.scss']
+  styleUrls: ['./wild.component.scss'],
 })
-export class WildComponent implements OnInit {
+export class WildComponent {
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  redirectTo() {
+    this.router.navigate(['/colleges']);
   }
-
 }

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@make-app/api-interfaces';
 
 @Component({
   selector: 'make-app-root',
@@ -8,6 +6,9 @@ import { Message } from '@make-app/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = 'College-App';
+  links = [
+    { path: '/', icon: 'home', title: 'Login' },
+    { path: 'colleges', icon: 'view_list', title: 'Colleges' },
+  ];
 }

@@ -1,1 +1,15 @@
-<p>colleges works!</p>
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <make-app-colleges-list
+      [colleges]="colleges$ | async"
+      (selected)="selectCollege($event)"
+    ></make-app-colleges-list>
+  </div>
+  <div class="col-50" layout="row" layout-align="center center">
+    <make-app-college-details
+      [form]="form"
+      [college]="selectedCollege$ | async"
+      (cancelled)="cancel()"
+    ></make-app-college-details>
+  </div>
+</div>

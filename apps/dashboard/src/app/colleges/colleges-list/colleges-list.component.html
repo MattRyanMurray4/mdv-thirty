@@ -1,1 +1,24 @@
-<p>colleges-list works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> <h1>Select a College</h1> </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let college of colleges"
+        (click)="selected.emit(college)"
+        class="mat-list-item"
+      >
+        <h1 matLine>{{ college.name }}</h1>
+
+        <button
+          mat-icon-button
+          (click)="deleted.emit(college); $event.stopImmediatePropagation()"
+        >
+          <mat-icon *ngIf="!readonly">delete</mat-icon>
+        </button>
+        <!-- add subroute -->
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -14,12 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "strictPropertyInitialization": false,
     "paths": {
+      "@env/environment": ["libs/environment/src/lib/environments/index.ts"],
       "@make-app/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@make-app/core-data": ["libs/core-data/src/index.ts"],
       "@make-app/core-state": ["libs/core-state/src/index.ts"],
-      "@make-app/environment": ["libs/environment/src/index.ts"],
       "@make-app/material": ["libs/material/src/index.ts"],
+      "@make-app/theme": ["libs/theme/src/index.ts"],
       "@make-app/ui-library": ["libs/ui-library/src/index.ts"]
     }
   },
